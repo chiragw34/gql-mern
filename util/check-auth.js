@@ -7,7 +7,7 @@ module.exports = context => {
   const authHeader = context.req.headers.authorization;
   if (authHeader) {
       const token = authHeader.split("Bearer ")[1];
-      console.log(token);
+    //   console.log(token);
       
     if (token) {
       try {
