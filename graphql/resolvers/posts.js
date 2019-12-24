@@ -28,7 +28,7 @@ module.exports = {
   },
   Mutation: {
     async createPost(_, { body }, context) {
-      if (args.body.trim() === "") {
+      if (body.trim() === "") {
         throw new Error("Post body must not be empty");
       }
 
