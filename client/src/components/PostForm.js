@@ -12,7 +12,7 @@ function PostForm() {
     body: ""
   });
 
-  const [createPost, { error }] = useMutation(CREATE_POST_MUTATION, {
+  const [createPost] = useMutation(CREATE_POST_MUTATION, {
     variables: values,
     update(proxy, result) {
       const data = proxy.readQuery({
@@ -53,7 +53,7 @@ function PostForm() {
         </Form.Field>
       </Form>
       {Object.keys(errors).length > 0 && (
-        <div className="ui error message">
+        <div className="ui error message" style={{marginBottom:20}}>
           {errors.message}
         </div>
       )}
